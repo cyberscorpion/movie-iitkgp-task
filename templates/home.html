@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">User City</th>
+        <th scope="col">User Country</th>
+        <th scope="col">User Producer</th>
+        <th scope="col">Username</th>
+
+      </tr>
+    </thead>
+    <tbody>
+     {% for movie in movies %}
+      <tr>
+          <th scope="row">{{forloop.counter}}</th>
+        <td><a href="/movie/detail/{{movie.id}}">{{movie.movie_title}}</a></td>
+        <td>{{movie.user_city}}</td>
+        <td>{{movie.user_country}}</td>
+        <td>{{movie.user_producer}}</td>
+        <td>{{movie.username}}</td>
+
+      </tr>
+         
+     {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+{% endblock %}

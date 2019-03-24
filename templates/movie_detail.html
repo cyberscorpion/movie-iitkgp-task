@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<br>
+    
+<img src="/media/{{movie.movie_image}}" alt="My image" style="height: 200px;">
+<br>
+<br>
+<h2>
+Movie Title: 
+{{movie.movie_title}}
+</h2>
+<br>
+User City:
+{{movie.user_city}}
+<br>
+User Country
+{{movie.user_country}}
+<br>
+User Producer
+{{movie.user_producer}}
+<br>
+Username
+{{movie.username}}
+
+{% endblock %}
